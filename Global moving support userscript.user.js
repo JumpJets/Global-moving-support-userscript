@@ -10,13 +10,13 @@
 
 "use strict";
 var hotk = 2, // Toggle hotkey. Mouse keys: LMB: 0, MMB: 1, RMB: 2, HistFwd: 4, HistBck: 3
-	spdm = 1.5, // Speed multiplier (per pixel). Use negative value if you want to invert moving.
-	allowtextselection = true, // Allow text selection.
-	alterm = true, // Enable alternative key mode. This mode use key for LMB: RMB, for anything else include RMB: LMB. Basically it modify your speed. You may scroll faster or slower depend on alter speed multiplier.
-	alterspdm = 5, // Additional speed multiplier. If > 1 then increese speed, if < 1 then decreese.
+	spdm = 1.5, // Speed multiplier (per pixel). Use negative value if you want to inverse scrolling direction.
+	allowtextselection = true, // Allow text selection when hotkey is LMB.
+	alterm = true, // Enable alternative key mode. This mode allow you to hold another key (if your main key is LMB, then alternative key is RMB, in other cases it LMB) to further modify your scrolling speed. It can be eighter faster (if multiplier > 1) or slower (if < 1).
+	alterspdm = 5, // Alternative mode speed multiplier. If > 1 then increese speed, if < 1 then decreese.
 	alterk = hotk === 0 ? 2 : 1,
-	inertiam = true, // Enable Inertia mode. Basically it allow you to continue scrolling after you release button in case your last scroll was fast.
-	inertiaslow = .75, // Basically friction of inertia (rate how faster it will stop or negative acceleration). Should be > 0
+	inertiam = true, // Enable inertia mode. Basically it allow you to continue scrolling after you release button in case your last scroll was fast. Similar functionality have any touch devices (mobile, tablet, e.t.c.).
+	inertiaslow = .75, // Friction/negative acceleration of inertia. Smaller value will make inertia longer and further and vice versa. Should be > 0.
 
 	// Don't touch variables below, they are unconfigurable.
 	fsm = false,
