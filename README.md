@@ -21,7 +21,7 @@ All what you need is simply click and hold any mouse hotkey (default RMB) to sta
 | **alterm** | Enable alternative key mode. This mode allow you to hold another key (if your main key is LMB, then alternative key is RMB, in other cases it LMB) to further modify your scrolling speed. It can be eighter faster (if multiplier > 1) or slower (if < 1). | true/false | true |
 | **alterspdm** | Alternative mode speed multiplier. | ±inf | 5 |
 | **inertiam** | Enable inertia mode. Basically it allow you to continue scrolling after you release button in case your last scroll was fast. Similar functionality have any touch devices (mobile, tablet, e.t.c.). | true/false | true |
-| **inertiaslow** | Friction/negative acceleration of inertia. Smaller value will make inertia longer and further and vice versa. | 0 - +inf | .75 |
+| **inertiaslow** | Friction/negative acceleration of inertia. Smaller value will make inertia longer and further and vice versa. | 0 - +inf | 1.75 |
 
 # FAQ
 ### Why no auto-scroll on MMB? Or what the difference?
