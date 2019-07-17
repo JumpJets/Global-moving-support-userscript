@@ -16,7 +16,7 @@ var hotk = 2, // Toggle hotkey. Mouse keys: LMB: 0, MMB: 1, RMB: 2, HistFwd: 4, 
 	alterspdm = 5, // Alternative mode speed multiplier. If > 1 then increese speed, if < 1 then decreese.
 	alterk = hotk === 0 ? 2 : 1,
 	inertiam = true, // Enable inertia mode. Basically it allow you to continue scrolling after you release button in case your last scroll was fast. Similar functionality have any touch devices (mobile, tablet, e.t.c.).
-	inertiaslow = .75, // Friction/negative acceleration of inertia. Smaller value will make inertia longer and further and vice versa. Should be > 0.
+	inertiaslow = 1.75, // Friction/negative acceleration of inertia. Smaller value will make inertia longer and further and vice versa. Should be > 0.
 
 	// Don't touch variables below, they are unconfigurable.
 	fsm = false,
