@@ -15,13 +15,13 @@ All what you need is simply click and hold any mouse hotkey (default RMB) to sta
 
 | Variable name | Description | Values | Default |
 | ------------- | ----------- | ------ | ------- |
-| **hotk** | Toggle hotkey | LMB: 0, MMB: 1, RMB: 2, HistFwd: 4, HistBck: 3 | 2 |
-| **spdm** | Speed multiplier (per pixel). Use negative value if you want to inverse scrolling direction. | ±inf | 1.5 |
-| **allowtextselection** | Allow text selection when hotkey is LMB. | true/false | true |
-| **alterm** | Enable alternative key mode. This mode allow you to hold another key (if your main key is LMB, then alternative key is RMB, in other cases it LMB) to further modify your scrolling speed. It can be eighter faster (if multiplier > 1) or slower (if < 1). | true/false | true |
-| **alterspdm** | Alternative mode speed multiplier. | ±inf | 5 |
-| **inertiam** | Enable inertia mode. Basically it allow you to continue scrolling after you release button in case your last scroll was fast. Similar functionality have any touch devices (mobile, tablet, e.t.c.). | true/false | true |
-| **inertiaslow** | Friction/negative acceleration of inertia. Smaller value will make inertia longer and further and vice versa. | 0 - +inf | 1.75 |
+| **hotkey** | Toggle hotkey | LMB: `1`, RMB: `2`, MMB: `4`, HistoryFwd: `16`, HistBck: `8` | `2` |
+| **speed_multiplier** | Speed multiplier (per pixel). Use negative value if you want to inverse scrolling direction. | `±inf` | `1.5` |
+| **allow_text_selection** | Allow text selection when hotkey is LMB. | `true`/`false` | `true` |
+| **use_alternative_key** | Enable alternative key mode. This mode allow you to hold another key (if your main key is LMB, then alternative key is RMB, in other cases it LMB) to further modify your scrolling speed. It can be either faster (if multiplier > 1) or slower (if < 1). | `true`/`false` | `true` |
+| **alternative_key_speed_multiplier** | Alternative mode speed multiplier. If > 1 then increase speed, if < 1 then decrease. | `±inf` | `5` |
+| **inertia_mode** | Enable inertia mode. Basically it allow you to continue scrolling after you release button in case your last scroll was fast. Similar functionality have any touch devices (mobile, tablet, e.t.c.). | `true`/`false` | `false` |
+| **inertia_friction** | Friction/negative acceleration of inertia. Smaller value will make inertia longer and further and vice versa. | `0` - `+inf` | `1.75` |
 
 # FAQ
 ### Why no auto-scroll on MMB? Or what the difference?
