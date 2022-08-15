@@ -7,9 +7,9 @@ You need addon in your browser such as **Tampermonkey** to use it.
 Try this userscript on this codepen page: https://codepen.io/XCanG/pen/pXmdPd
 
 # What does this script do?
-This script allow you to use your mouse keys to scroll on page. No more need to move your mouse over scrollbar and drag it. No more issues with horizontal scrollbar on Chrome (when it hiding and not appearing).
+This script allow you to use your mouse keys to scroll on page. No more need to move your mouse over scrollbar and drag it. No more issues with horizontal scrollbar on Chrome _(when it hiding and not appearing)_.
 
-All what you need is simply click and hold any mouse hotkey (default RMB) to start scrolling. To stop simply release mouse hotkey. You still will be able to select text (LMB) and open menu (RMB).
+All what you need is simply click and hold any mouse hotkey (default RMB) to start scrolling. To stop, simply release mouse hotkey. You still will be able to select text (LMB) and open context menu (RMB).
 
 # Settings
 
@@ -27,16 +27,16 @@ All what you need is simply click and hold any mouse hotkey (default RMB) to sta
 ### Why no auto-scroll on MMB? Or what the difference?
 | Auto-scroll | This userscript |
 | ----------- | --------------- |
-| Clicking MMB just activate Auto-scroll mode | Clicking hotkey prepare to use scroll, but if no movement is made it cancel and you can open menu on RMB or navigate via Forward/Backward history buttons or even activate MMB Auto-scroll |
-| Point of creating auto-scroll have ±12px around before it start scrolling | You can move mouse even on 1px to start scrolling |
+| Clicking MMB just activate Auto-scroll mode | Clicking hotkey prepare to use scroll, but if no movement is made, it cancel scrolling and you open menu on RMB instead or navigate via Forward/Backward history buttons or even activate MMB Auto-scroll |
+| Auto-scroll create ±12px area around clicked position and you need yo move mouse beyond it to start scrolling | You can move mouse even on 1px to start scrolling |
 | To achieve confortable speed you need to move mouse to proper distance, while in the process scrolling will be accelerated | Scrolling speed is fixed, however with alternative key you can change it to faster or slower rate |
-| After you setup correct speed you may leave it as it is and forget | You will need to move your mouse manually by hand and speed affected only by you |
-| To cancel you need to click MMB again or the whole time hold MMB | Just release hotkey button to cancel |
+| After you setup correct speed you may preserve it (cruise effect) | You will need to move your mouse manually by hand and speed affected only by you |
+| To cancel you need to click MMB again or hold MMB whole time | Just release hotkey button to cancel |
 
-Overall time for shorter scroll smaller for userscript. To human mind will be easier to work with fixed scrolling speed, as mouse wheel do, however mouse wheel typically slower when we need. You still may use MMB in both cases if you want to automatically scrolling pages.
+Overall time for shorter scrolls smaller for userscript. To human mind will be easier to work with fixed scrolling speed, as mouse wheel do, however mouse wheel typically slower, than speed we need. You still may use MMB in both cases if you want to scroll pages at constant speed (cruise effect).
 
 # Suggestion and bug reports
-If you want to suggest feature or report bugs, feel free to open issue or eighter send commit/pull request.
+If you want to suggest feature or report bugs, feel free to open issue or either send commit/pull request.
 
 # License
 MIT
