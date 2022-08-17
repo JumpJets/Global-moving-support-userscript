@@ -66,7 +66,7 @@
 
 		// If there is no scroll, then we reinitialize move event with parent as target until we hit <html></html> node
 		if (!vertical_scroll && !horizontal_scroll && us_target !== document.documentElement) {
-			return scroll_mousemove(e, { _tg: us_target.parentElement, _up: _up });
+			return scroll_mousemove(e, { _tg: us_target?.parentElement, _up: _up });
 		} else if (!vertical_scroll && !horizontal_scroll) {
 			return false;
 		}
