@@ -264,5 +264,13 @@
 	if (us_hotkey === 2 || (us_hotkey === 1 && us_use_alternative_key)) document.addEventListener("contextmenu", scroll_prevent_contextmenu, { capture: false });
 	document.addEventListener("mouseleave", scroll_mouseleave, { capture: false });
 	document.addEventListener("mouseenter", scroll_mouseenter, { capture: false });
-	document.addEventListener("load", set_tickrate);
+	window.addEventListener("pageshow", set_tickrate);
+
+	window.addEventListener("pagehide", (e) => {
+		document.removeEventListener("mousedown", scroll_mousedown);
+		document.removeEventListener("mouseup", scroll_mouseup);
+		document.removeEventListener("mouseleave", scroll_mouseleave);
+		document.removeEventListener("mouseenter", scroll_mouseenter);
+		if (us_hotkey === 2 || (us_hotkey === 1 && us_use_alternative_key)) document.removeEventListener("contextmenu", scroll_prevent_contextmenu);
+	});
 })();
