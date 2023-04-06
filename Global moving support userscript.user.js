@@ -258,13 +258,16 @@
 			+ "e-2")
 	}
 
-	// Adding events on page
-	document.addEventListener("mousedown", scroll_mousedown, { capture: true });
-	document.addEventListener("mouseup", scroll_mouseup, { capture: true });
-	if (us_hotkey === 2 || (us_hotkey === 1 && us_use_alternative_key)) document.addEventListener("contextmenu", scroll_prevent_contextmenu, { capture: false });
-	document.addEventListener("mouseleave", scroll_mouseleave, { capture: false });
-	document.addEventListener("mouseenter", scroll_mouseenter, { capture: false });
-	window.addEventListener("pageshow", set_tickrate);
+	// Adding events on page, e.persisted indicate page loaded from cache
+	window.addEventListener("pageshow", async (e) => {
+		await set_tickrate();
+
+		document.addEventListener("mousedown", scroll_mousedown, { capture: true });
+		document.addEventListener("mouseup", scroll_mouseup, { capture: true });
+		if (us_hotkey === 2 || (us_hotkey === 1 && us_use_alternative_key)) document.addEventListener("contextmenu", scroll_prevent_contextmenu, { capture: false });
+		document.addEventListener("mouseleave", scroll_mouseleave, { capture: false });
+		document.addEventListener("mouseenter", scroll_mouseenter, { capture: false });
+	});
 
 	window.addEventListener("pagehide", (e) => {
 		document.removeEventListener("mousedown", scroll_mousedown);
